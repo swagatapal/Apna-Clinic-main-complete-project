@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Pneumonia</title>
+    <link rel="stylesheet" href="\static\css\multidis.css">
+</head>
+<style>
+#img-preview {
+    width: 155px;  
+    margin-bottom: 20px;
+}
+#img-preview img {  
+    width: 400px;
+    height: auto; 
+    display: block;  
+    border-radius: 15px; 
+    padding: 1px;
+    border: 1px solid rgb(42, 42, 42);
+}
+</style>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="image">
+        <img src="\static\image\nurse_note.webp" alt="">
+    </div>
+    <div class="main">
+        <h1>Pneumonia</h1>
+        <p>Please provide an X-ray image of your chest. <br>
+        Note: Uploaded file must be an image only. It can be of any format(png, jpg, jpeg etc.), of any size and resolution.
+        </p>
+        <form class="form-horizontal" action="{{ url_for('pneumoniapredictPage') }}" method="POST" enctype="multipart/form-data">
+            <div id="overflowcheck">
+                <input onchange="readURL(this);" type="file" id = "choose-file" name="image" placeholder="Upload Image">
+                <br>
+                <br>
+                <label for="choose-file">Upload Image will be appeared here:</label><br>
+                <br>
+                <div id="img-preview"></div>
+            </div>
+            <br>
+            <button type="submit">Check</button>
+        </form>
+        {{message}}
+        <br>
+        <p>{{ prediction_text }}</p>
+</body>
+<script src="\static\js\pneumonia2.js"></script>
+</html>

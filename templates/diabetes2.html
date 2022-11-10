@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Diabetes</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/multidis.css') }}"> -->
+    <link rel="stylesheet" href="\static\css\multidis.css">
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="image">
+        <img src="\static\image\nurse_note.webp" alt="">
+    </div>
+    <div class="main">
+        <h1>Diabetes</h1>
+        <p>Please provide correct information for the following parameters below to help us check your health condition : </p>
+        <form action="{{ url_for('predictPage')}}"method="post">
+            <div id="overflowcheck">
+            <table>
+                <tr><td>pregnancies</td><td>
+                <input type="text" name="pregnancies" placeholder="Enter no of pregnancies" required="required" />
+                </td></tr>
+
+                <tr><td>Glucose</td><td>
+                <input type="text" name ="Glucose" placeholder="Fasting glucose in mg/dL" required="required" />
+                </td></tr>
+
+                <tr><td>Diastolic Blood Pressure</td><td>
+                <input type="text" name ="DiastolicBloodPressure" placeholder="in mm of Hg"required="required" />
+                </td></tr>
+
+                <tr><td>Skin Thickness</td><td>
+                <input type="text" name = "SkinThickness" placeholder="in mm"required="required" />
+                </td></tr>
+
+                <tr><td>Insulin Level</td><td>
+                <input type="text" name = "InsulinLevel" placeholder="in IU/mL"required="required" />
+                </td></tr>
+
+                <tr><td>Body Mass Index</td><td>
+                <input type="text" name = "BodyMassIndex" placeholder="inKg/sq. m"required="required" />
+                </td></tr>
+
+                <tr><td>Diabetes Pedigree Function</td><td>
+                <input type="text" name = "DiabetesPedigreeFunction" placeholder = "Diabetes Pedigree Function"required="required" />
+                </td></tr>
+
+                <tr><td>Age</td><td>
+                <input type="text" name = "Age" placeholder="in years"required="required" />
+                </td></tr>
+            </table>
+            </div>
+
+            <br>
+            <td><button type="submit">Check</button></td>
+            <!-- <button type="submit">Check</button> -->
+
+        </form>
+        <div>
+        <br><br><p>{{ prediction_text }} </p>
+        </div>
+</body>
+</html>
+

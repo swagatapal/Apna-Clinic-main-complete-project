@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Home</title>
+    <link rel="stylesheet" href="\static\css\home.css">
+    <script src="\static\js\home.js"></script>
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="aside">
+        <h2>Know More of certain common Diseases</h2>
+        <p> including their symptoms, causes, precautions and preliminary cure...</p>
+         <ul>
+            <li><a href="">Cold & Cough</a></li><hr>
+            <li><a href="">Fever</a></li><hr>
+            <li><a href="pneumonia.html">Pneumonia</a></li><hr>
+            <li><a href="">Asthma & Bronchitis</a></li><hr>
+            <li><a href="">Diarrhoea</a></li><hr>
+            <li><a href="">Typhoid</a></li><hr>
+            <li><a href="">Polio</a></li><hr>
+            <li><a href="">Liver Cirrhosis</a></li><hr>
+            <li><a href="">Cancer</a></li><hr>
+            <li><a href="">Tumour</a></li><hr>
+            <li><a href="">Allergies</a></li><hr>
+            <li><a href="">Eye problems & Conjunctivitis</a></li><hr>
+            <li><a href="heart disease.html">Heart Diseases</a></li><hr>
+            <li><a href="">Chronic Lower Respiration</a></li><hr>
+            <li><a href="">AIDS</a></li><hr>
+            <li><a href="">Covid-19</a></li>
+        </ul> 
+    </div> 
+    <div class="status">
+        <button onclick="gotoHS()">Check your health status now</button>
+    </div>
+    <div class="first">
+        <a href=""><img src="\static\image\first_aid.jpg" alt=""></a><br>
+        
+    </div>
+    <div class="predict">
+        <h2>Also checkout for the following diseases:</h2>
+        <a href="{{ url_for('cancerintroPage') }}"><button>Breast Cancer</button></a>
+        <a href="{{ url_for('diabetesIntroPage') }}"><button>Diabetes</button></a>
+        <a href="{{ url_for('heartDiseaseIntroPage') }}"><button>Heart Disease</button></a>
+        <a href="{{ url_for('kidneyDiseaseIntroPage') }}"><button>Kidney Disease</button></a>
+        <a href="{{ url_for('liverDiseaseIntroPage') }}"><button>Liver Disease</button></a>
+        <a href="{{ url_for('malariaDiseaseIntroPage') }}"><button>Malaria Disease</button></a>
+        <a href="{{ url_for('pneumoniaDiseaseIntroPage') }}"><button>Pneumonia Disease</button></a>
+        <button class="btn" onclick="gotoCov()">Covid-19</button>
+        <p>&copy; Copyright reserved by apnaofficial.com<br>
+        We do not gurantee 100% correctness and effeciency of the algorithms. All diseases provided above have more than 90% accuracy in their predictions and we are constantly working on improvising the models. We genuinely advise you to consult a physician, if symptoms do persist.</p>
+    </div>
+</body>
+</html>

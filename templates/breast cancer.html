@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Breast Cancer</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/multidis.css') }}"> -->
+    <link rel="stylesheet" href="\static\css\multidis.css">
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="image">
+        <img src="\static\image\nurse_note.webp" alt="">
+    </div>
+    <div class="main">
+        <h1>Breast Cancer</h1>
+        <p>Breast cancer is a cancer that forms in cells. After skin cancer, breast cancer is the most common cancer diagnosed in women in the United States. Breast cancer can occur in both men and women, but it's far more common in women.</p> <br>
+        <h3>Symptoms</h3>
+        <ul>
+            <li> A breast lump or thickening that feels different from the surrounding tissue</li>
+            <li>Change in the size, shape or appearance of the breast</li>
+            <li>Changes to the skin over the breast, such as dimpling</li>
+            <li>Redness or ptting of the skin over your breast, like the skin of an orange</li>
+        </ul>
+        <p>To know more about Cancer and their treatment, click <a href="">here</a></p> <br>
+        <a class="nav-link" href="{{ url_for('cancerPage') }}"><button>Check your status now</button></a>
+    </div>
+    <br>
+</body>
+<script>
+    function bcheck(){
+        window.location.href="breast cancer2.html";
+    }
+</script>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Kidney Diseases</title>
+    <link rel="stylesheet" href="\static\css\multidis.css">
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="image">
+        <img src="\static\image\nurse_note.webp" alt="">
+    </div>
+    <div class="main">
+        <h1>Chronic Kidney Disease</h1>
+        <p>Please provide correct information for the following parameters below to help us check your health condition:</p>
+        <form  action="{{ url_for('predictPage') }}" method="POST">
+            <div id="overflowcheck">
+            <table>
+                <tr><td>id:</td><td>
+                    <input type="text" name="id" placeholder="Enter id" required="required"/>
+                </td></tr> 
+
+                <tr><td>Age:</td><td>
+                    <input type="text" name="age" placeholder="Enter age" required="required"/>
+                </td></tr> 
+                
+                <tr><td>Diastolic Blood Pressure(bp):</td><td>
+                    <input type="text" name="DiastolicBloodPressure:" placeholder="Enter Diastolic Blood Pressure: " required="required"/>
+                </td></tr>
+
+                <tr><td>Specific Gravity(sg): </td><td>
+                    <input type="text" name="SpecificGravity" placeholder="Enter Specific Gravity:  " required="required"/>
+                </td></tr>
+
+                <tr><td>Albumin Level(al): </td><td>
+                    <input type="text" name="AlbuminLevel" placeholder="Enter Albumin Level:  " required="required"/>
+                </td></tr>
+
+                <tr><td>Sugar Level(su): </td><td>
+                    <input type="text" name="SugarLevel" placeholder="Enter Sugar Level:  " required="required"/>
+                </td></tr>
+
+                <tr><td>Red Blood Cells(rbc): </td><td>
+                    <input type="radio" name="RedBloodCells" value="1"> Abnormal 
+                    <input type="radio" name="RedBloodCells" value="0"> Normal
+                </td></tr>
+
+                <tr><td>Pus Cell(pc): </td><td>
+                    <input type="radio" name="PusCell" value="1"> Abnormal 
+                    <input type="radio" name="PusCell" value="0"> Normal
+                </td></tr>
+
+                <tr><td>Pus Cell Clumps(pcc): </td><td>
+                    <input type="radio" name="PusCellClumps " value="1"> Present 
+                    <input type="radio" name="PusCellClumps " value="0"> NotPresent
+                </td></tr>
+
+                <tr><td>Bacteria(ba): </td><td>
+                    <input type="radio" name="Bacteria" value="1"> Present 
+                    <input type="radio" name="Bacteria: " value="0"> NotPresent
+                </td></tr>
+
+                <tr><td>Blood Glucose(bgr): </td><td>
+                    <input type="text" name="BloodGlucose " placeholder="in mg/dL" required="required"/>
+                </td></tr>
+
+                <tr><td>Urea(bu): </td><td>
+                    <input type="text" name="Urea" placeholder="in mg/dL" required="required"/>
+                </td></tr>
+
+                <tr><td>Cystatin(sc): </td><td>
+                    <input type="text" name="sc" placeholder="in mg/dL" required="required"/>
+                </td></tr>
+
+                <tr><td>Sodium(sod): </td><td>
+                    <input type="text" name="Sodium" placeholder="in mEq/dL" required="required"/>
+                </td></tr>
+
+                <tr><td>Position of the Kidney(POT): </td><td>
+                    <input type="text" name="POT" placeholder="in mEq/dL" required="required"/>
+                </td></tr>
+
+                <tr><td>Haemoglobin: </td><td>
+                    <input type="text" name="Haemoglobin" placeholder="in g" required="required"/>
+                </td></tr>
+
+                <tr><td>Packed cell Volume: </td><td>
+                    <input type="text" name="PackedcellVolume" placeholder="in mg/dL" required="required"/>
+                </td></tr>
+
+                <tr><td>WBC count: </td><td>
+                    <input type="text" name="WBCcount" placeholder="in 1000 per mm3" required="required"/>
+                </td></tr>
+
+                <tr><td>RBC count:</td><td>
+                    <input type="text" name="RBCcount" placeholder="in millions per mm3" required="required"/>
+                </td></tr>
+
+                <tr><td>Hypertension(htn): </td><td>
+                    <input type="radio" name="Hypertension" value="1"> Yes 
+                    <input type="radio" name="Hypertension" value="0"> No
+                </td></tr>
+
+                <tr><td>Diabetes(dm): </td><td>
+                    <input type="radio" name="Diabetes" value="1"> Yes 
+                    <input type="radio" name="Diabetes" value="0"> No
+                </td></tr>
+
+                <tr><td>Coronary Artery Disease(cad): </td><td>
+                    <input type="radio" name="CoronaryArteryDisease" value="1"> Yes 
+                    <input type="radio" name="CoronaryArteryDisease" value="0"> No
+                </td></tr>
+
+                <tr><td>Appetite: </td><td>
+                    <input type="radio" name="Appetite" value="1"> Good
+                    <input type="radio" name="Appetite" value="0"> Poor
+                </td></tr>
+
+                <tr><td>Swollen feet(pe): </td><td>
+                    <input type="radio" name="Swollenfeet" value="1"> Yes
+                    <input type="radio" name="Swollenfeet" value="0"> No
+                </td></tr>
+
+                <tr><td>Anaemia(ane): </td><td>
+                    <input type="radio" name="Anaemia" value="1"> Yes
+                    <input type="radio" name="Anaemia" value="0"> No
+                </td></tr>
+                
+            </table>
+            </div>
+
+            
+            <br>
+            <br>
+            <button type="submit">Check</button>
+            <!-- <button type="submit" onclick="kcheck2()">Check & Next</button> -->
+            <br><br>
+        </form>
+</body>
+<script>
+    function kcheck2(){
+        window.location.href="kidney diseases3.html";
+    }
+</script>
+</html>

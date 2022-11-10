@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Malaria</title>
+    <link rel="stylesheet" href="\static\css\multidis.css">
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="image">
+        <img src="\static\image\nurse_note.webp" alt="">
+    </div>
+    <div class="main">
+        <h1>Malaria</h1>
+        <p>Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tirednes, vomiting and headaches. In severe cases, it can cause yellowing of skin, seizures, coma or death. Symptoms usually begin 10 to 15 days after being bitten by an infected mosquito. If not treated properly, people may have recurrences of the disease months later.</p> <br>
+        <h3>Symptoms</h3>
+        <ul>
+            <li> Fever: This is the most common symptom</li>
+            <li>Chills</li>
+            <li>Headaches and dizziness</li>
+            <li>Nausea and vomiting</li>
+        </ul>
+        <p>To know more about Malaria and their treatment, click <a href="">here</a></p> <br>
+        <a class="nav-link" href="{{ url_for('malariaDiseasePage') }}"><button>Check your status now</button></a>
+        <!-- <button onclick="mcheck()"> Check your status now</button> -->
+    </div>
+</body>
+<script>
+    function mcheck(){
+        window.location.href="malaria2.html";
+    }
+</script>
+</html>

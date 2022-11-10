@@ -1,0 +1,85 @@
+.neg{
+    background-color: rgb(251, 243, 243);
+}
+.logo{
+    position: absolute;
+    z-index: 2;
+    margin: 0px 0px;
+}
+.logo .symbol{
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    padding-right: 15px;
+    border-radius: 25px;
+}
+.logo .name{
+    height: 40px;
+}
+nav{
+    background-color: black;
+    height: 52px;
+    margin: 0px 0px;
+    border-radius: 4px;
+}
+nav ul{
+    /* overflow: auto; */
+    margin-left: 20%;
+}
+nav li{
+    float: left;
+    list-style: none;
+    margin: 16px 20px;
+    
+}
+nav .profile{
+    margin: 8px 20px;
+    float: left;
+}
+nav li a{
+    color: aliceblue;
+    text-decoration: none;
+    padding: 5px 30px;
+    margin-top: 5px;
+}
+nav li a:hover{
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+nav .profile a:hover{
+    background-color: transparent;
+}
+nav li a img{
+    height: 35px;
+    width: 35px;
+    border-radius: 20px;
+    margin-top: 0px;
+}
+.main{
+    text-align: center;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main .green{
+    color: rgb(3, 228, 3);
+}
+.main .red{
+    color: rgb(223, 27, 27);
+}
+.main button{
+    background-color: black;
+    color: turquoise;
+    height: 40px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 30px;
+    border-width: 3px;
+    cursor: pointer;
+}
+.main button:hover{
+    font-size: 15px;
+    width: 208px;
+    height: 42px;
+}

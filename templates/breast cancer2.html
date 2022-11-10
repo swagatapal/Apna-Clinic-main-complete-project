@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Breast Cancer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/multidis.css') }}">
+    <!-- <link rel="stylesheet" href="\static\css\breast cancer2.css"> -->
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+
+    <div>
+    <div class="image">
+        <img src="\static\image\nurse_note.webp" alt="">
+    </div>
+    <div class="main">
+        <h1>Breast Cancer</h1>
+        <p>Please fill up the table provided below with the necessary correct information:</p>
+        <form action="{{ url_for('predictPage') }}" method="POST">
+            <div id="overflowcheck">
+            <table>
+                <tr><td>id</td><td>
+                    <input type="text" name="id" placeholder="Enter id" required="required" />
+                </td></tr>
+
+                <tr><td>diagnosis</td><td>
+                    <input type="text" name="diagnosis" placeholder="Enter diagnosis" required="required" />
+                </td></tr>
+
+                <tr><td>radius_mean</td><td>
+                    <input type="text" name="radius_mean" placeholder="Enter radius_mean" required="required" />
+                </td></tr>
+
+                <tr><td>texture_mean</td><td>
+                    <input type="text" name="texture_mean" placeholder="Enter texture_mean" required="required" />
+                </td></tr>
+
+                <tr><td>perimeter_mean</td><td>
+                    <input type="text" name="perimeter_mean" placeholder="Enter perimeter_mean" required="required" />
+                </td></tr>
+
+                <tr><td>area_mean</td><td>
+                    <input type="text" name="area_mean" placeholder="Enter area_mean" required="required" />
+                </td></tr>
+
+                <tr><td>smoothness_mean</td><td>
+                    <input type="text" name="smoothness_mean" placeholder="Enter smoothness_mean" required="required" />
+                </td></tr>
+
+                <tr><td>compactness_mean</td><td>
+                    <input type="text" name="compactness_mean" placeholder="Enter compactness_mean" required="required" />
+                </td></tr>
+
+                <tr><td>concavity_mean</td><td>
+                    <input type="text" name="concavity_mean" placeholder="Enter concavity_mean" required="required" />
+                </td></tr>
+
+                <tr><td>concave points_mean</td><td>
+                    <input type="text" name="concave points_mean" placeholder="Enter concave points_mean" required="required" />
+                </td></tr>
+
+                <tr><td>symmetry_mean</td><td>
+                    <input type="text" name="symmetry_mean" placeholder="Enter symmetry_mean" required="required" />
+                </td></tr>
+
+                <tr><td>fractal_dimension_mean</td><td>
+                    <input type="text" name="fractal_dimension_mean" placeholder="Enter fractal_dimension_mean" required="required" />
+                </td></tr>
+                
+                <tr><td>radius_se</td><td>
+                    <input type="text" name="radius_se" placeholder="Enter radius_se" required="required" />
+                </td></tr>
+
+                <tr><td>texture_se</td><td>
+                    <input type="text" name="texture_se" placeholder="Enter texture_se" required="required" />
+                </td></tr>
+                
+                <tr><td>perimeter_se </td><td>
+                    <input type="text" name="perimeter_se" placeholder="Enter perimeter_se" required="required" />
+                </td></tr>
+
+                <tr><td>area_se</td><td>
+                    <input type="text" name="area_se" placeholder="Enter area_se" required="required" />
+                </td></tr>
+                
+                <tr><td>smoothness_se</td><td>
+                    <input type="text" name="smoothness_se" placeholder="Enter smoothness_se" required="required" />
+                </td></tr>
+
+                <tr><td>compactness_se</td><td>
+                    <input type="text" name="compactness_se" placeholder="Enter compactness_se" required="required" />
+                </td></tr>
+                
+                <tr><td>concavity_se</td><td>
+                    <input type="text" name="concavity_se" placeholder="Enter concavity_se" required="required" />
+                </td></tr>
+
+                <tr><td>concave points_se</td><td>
+                    <input type="text" name="concave points_se" placeholder="Enter concave points_se" required="required" />
+                </td></tr>
+                
+                <tr><td>symmetry_se</td><td>
+                    <input type="text" name="symmetry_se" placeholder="Enter symmetry_se" required="required" />
+                </td></tr>
+
+                <tr><td>fractal_dimension_se</td><td>
+                    <input type="text" name="fractal_dimension_se" placeholder="Enter fractal_dimension_se" required="required" />
+                </td></tr>
+                
+                <tr><td>radius_worst</td><td>
+                    <input type="text" name="radius_worst" placeholder="Enter radius_worst" required="required" />
+                </td></tr>
+
+                <tr><td>texture_worst</td><td>
+                    <input type="text" name="texture_worst" placeholder="Enter texture_worst" required="required" />
+                </td></tr>
+                
+                <tr><td>perimeter_worst</td><td>
+                    <input type="text" name="perimeter_worst" placeholder="Enter perimeter_worst" required="required" />
+                </td></tr>
+
+                <tr><td>area_worst</td><td>
+                    <input type="text" name="area_worst" placeholder="Enter area_worst" required="required" />
+                </td></tr>
+                
+                <tr><td>smoothness_worst</td><td>
+                    <input type="text" name="smoothness_worst" placeholder="Enter smoothness_worst" required="required" />
+                </td></tr>
+
+                <tr><td>compactness_worst</td><td>
+                    <input type="text" name="compactness_worst" placeholder="Enter compactness_worst" required="required" />
+                </td></tr>
+                
+                <tr><td>concavity_worst</td><td>
+                    <input type="text" name="concavity_worst" placeholder="Enter concavity_worst" required="required" />
+                </td></tr>
+
+                <tr><td>concave points_worst</td><td>
+                    <input type="text" name="concave points_worst" placeholder="Enter concave points_worst" required="required" />
+                </td></tr>
+
+                <tr><td>symmetry_worst </td><td>
+                    <input type="text" name="symmetry_worst " placeholder="symmetry_worst " required="required" />
+                </td></tr>
+
+                <tr><td>fractal_dimension_worst</td><td>
+                    <input type="text" name="fractal_dimension_worst" placeholder="fractal_dimension_worst" required="required" />
+                </td></tr>
+            </table>
+            </div>
+            <br>
+            <button type="submit">Check</button>
+            <br><br>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
+
+
+<!-- <input type="submit" class="btn btn-info btn-block" value="Predict"> -->
+<!-- <form action="{{ url_for('predictPage') }}" method="POST"> -->

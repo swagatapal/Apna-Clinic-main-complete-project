@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+    <!-- <link rel="stylesheet" href="result.css"> -->
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <img src="\static\image\happy.png" alt="">
+        <h1 class="green">Congratulations!! You seem to be all fine.</h1>
+        <p>Do not worry. Your health conditions as per your data provided seem to be all good.
+            <br>Still, if you feel any discomfort, check again or consult a physician, if required.</p>
+        <p>Thank You for checking with us. Visit again</p>
+        <a href="{{ url_for('home') }}"><button>Back To Home</button></a>
+        <!-- <button onclick="home()">Back To Home</button> -->
+    </div>
+</body>
+<script src="result.js"></script>
+</html>

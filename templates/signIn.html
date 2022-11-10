@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Sign In</title>
+    <link rel="stylesheet" href="signIn.css">
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="D:/HTML projects/Apna Clinic/symbol.png" alt="" >
+        <img class="name" src="D:/HTML%20projects/Apna%20Clinic/logo.png" alt="">
+    </div>
+    <div class="login">
+        <p class="sign">Sign In</p>
+        <p></p>
+        <form action="backend.php">
+            <p>Username: <input type="text" placeholder="Enter your username" required></p>
+            <p>E-mail id: <input class="email" type="email" placeholder="example@gmail.com" required></p>
+            <p>Password: <input class="email" type="password" placeholder="******" required><br>
+            <a href="">Forgot password?</a></p>
+            <p><button type="submit" onclick="gotoHome()">Login</button></p>
+        </form>
+        Already haven't registered yet? <a href="signUp.html">Sign up</a>
+    </div>
+</body>
+<script>
+    function gotoHome(){
+        window.location.href="home.html";
+    }
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Liver Disease</title>
+    <link rel="stylesheet" href="\static\css\multidis.css">
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="image">
+        <img src="\static\image\nurse_note.webp" alt="">
+    </div>
+    <div class="main">
+        <h1>Liver Diseases</h1>
+        <p>Liver is the largest organ in our body, which helps digesting food, store energy and remove poisons. <br> Liver Disease, also called Hepatitic Disease are generally caused by viruses. however, it can also be cause by consumption of drugs, poisons or too much alcohol, which may lead to liver cirrhosis.</p> <br>
+        <h3>Symptoms</h3>
+        <ul>
+            <li>Swelling of abdomen and legs</li>
+            <li>Bruising easily</li>
+            <li>Changes in colour of stool and urine</li>
+            <li>Jaundice, or yellowing of skin and eyes</li>
+        </ul>
+        <p>To know more about Liver diseases and their treatment, click <a href="">here</a></p> <br>
+        <a class="nav-link" href="{{ url_for('liverDiseasePage') }}"><button>Check your status now</button></a>
+    </div>
+</body>
+<script>
+    function lcheck(){
+        window.location.href="liver diseases2.html";
+    }
+</script>
+</html>

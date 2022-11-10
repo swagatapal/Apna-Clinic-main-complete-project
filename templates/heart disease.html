@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Heart Disease</title>
+    <link rel="stylesheet" href="\static\css\multidis.css">
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="image">
+        <img src="\static\image\nurse_note.webp" alt="">
+    </div>
+    <div class="main">
+        <h1>Heart Disease</h1>
+        <p><img src="\static\image\caution.png" alt="" height="12px"> &nbsp;No info currently available under this. Check back again soon!</p>
+        <p>However, we can surely predict your heart condition now...</p>
+        <a class="nav-link" href="{{ url_for('heartDiseasePage') }}"><button>Check your status now</button></a>
+        <!-- <button onclick="hcheck()"> Check your status now</button> -->
+    </div>
+</body>
+<script>
+    function hcheck(){
+        window.location.href="heart disease2.html";
+    }
+</script>
+</html>

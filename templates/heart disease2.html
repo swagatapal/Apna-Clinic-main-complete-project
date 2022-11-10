@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Heart Disease</title>
+    <link rel="stylesheet" href="\static\css\multidis.css">
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="image">
+        <img src="\static\image\nurse_note.webp" alt="">
+    </div>
+    <div class="main">
+        <h1>Heart Disease</h1>
+        <p>Please provide correct information for the following parameters below to help us check your health condition:</p>
+        <form action="{{ url_for('predictPage') }}" method="POST">
+            <div id="overflowcheck">
+            <table>
+                <tr><td>Age:</td><td>
+                    <input type="text" name="age" placeholder="Enter age" required="required"/>
+                </td></tr>
+
+                <tr><td>Gender:</td><td>
+                    <input type="radio" name="gender" value="0"> Male 
+                    <input type="radio" name="gender" value="1"> Female
+                </td></tr>
+
+                <tr><td>chest pain:</td><td>
+                    <input type="radio" name="chestpain" value="0"> Asymptomatic 
+                    <input type="radio" name="chestpain" value="1"> Atypical <br>
+                    <input type="radio" name="chestpain" value="2"> Non-anginal
+                    <input type="radio" name="chestpain" value="3"> Typical
+                </td></tr>
+
+                <tr><td>Systolic Blood pressure:</td><td>
+                    <input type="text" name="SystolicBlood pressure" placeholder="in mm of Hg" required="required"/>
+                </td></tr>
+
+                <tr><td>Cholesterol:</td><td>
+                    <input type="text" name="Cholesterol" placeholder="in mg/dL" required="required"/>
+                </td></tr>
+
+                <tr><td>Fasting Glucose:</td><td>
+                    <input type="text" name="FastingGlucose" placeholder="in mg/dL" required="required"/>
+                </td></tr>
+
+                <tr><td>Resting ECG:</td><td>
+                    <input type="radio" name="RestingECG" value="0"> Irregular 
+                    <input type="radio" name="RestingECG" value="1"> Regular
+                </td></tr>
+
+                <tr><td>Maximum Heart rate:</td><td>
+                    <input type="text" name="MaximumHeart rate" placeholder="in beats/min" required="required"/>
+                </td></tr>
+
+                <tr><td>Exercise Induced angina:</td><td>
+                    <input type="radio" name="ExerciseInducedangina" value="1"> Yes
+                    <input type="radio" name="ExerciseInducedangina" value="0"> No
+                </td></tr>
+
+                <tr><td>ST depression:</td><td>
+                    <input type="text" name="STdepression:" placeholder="Enter value of lowest point in ST" required="required"/>
+                </td></tr>
+
+                <tr><td>Slope:</td><td>
+                    <input type="radio" name="Slope" value="0"> Downsloping
+                    <input type="radio" name="Slope" value="1"> Horizontal
+                    <input type="radio" name="Slope" value="2"> Upsloping 
+                </td></tr>
+
+                <tr><td>Number of major vessels: </td><td>
+                    <input type="text" name="Number of major vessels" required="required"/>
+                </td></tr>
+
+                <tr><td>Blood flow:</td><td>
+                    <input type="radio" name="Bloodflow" value="1"> No flow
+                    <input type="radio" name="Bloodflow" value="2"> Normal
+                    <input type="radio" name="Bloodflow" value="3"> Abnormal 
+                </td></tr>
+
+            </table>
+            </div>
+            <br>
+            <button type="submit">Check</button>
+            <br><br>
+        </form>
+        <!-- <div>
+            <br><br>{{ prediction_text }}
+        </div> -->
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Diabetes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/multidis.css') }}">
+    <!-- <link rel="stylesheet" href="\static\css\multidis.css"> -->
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="image">
+        <img src="\static\image\nurse_note.webp" alt="">
+    </div>
+    <div class="main">
+        <h1>Diabetes</h1>
+        <p>Diabetes is a disease that occurs when our blood glucose, also called blood sugar, is too high. Blood glucose is our main source of energyand comes from the food we eat. <br>Insulin, a hormone secreted by the pancreas, helps glucose from foosget into our cells to be used for energy.Sometimes, our body doesn't make enough, or any insulin or doesn't use insulin well. Glucose then stays in our blood and doesn't reach our cells, which we commonly term 'Diabetes' </p> <br>
+        <h3>Symptoms</h3>
+        <ul>
+            <li> Frequent urination</li>
+            <li>Feeling very thirsty too often</li>
+            <li>Extreme fatigue and dizziness</li>
+            <li>Blurry vision</li>
+        </ul>
+        <p>To know more about Diabetes and their treatment, click <a href="">here</a></p> <br>
+        <a class="nav-link" href="{{ url_for('diabetesPage') }}"><button>Check your status now</button></a>
+        <!-- <button onclick="dcheck()"> Check your status now</button> -->
+    </div>
+</body>
+<script>
+    function dcheck(){
+        window.location.href="diabetes2.html";
+    }
+</script>
+</html>

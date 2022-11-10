@@ -1,0 +1,60 @@
+body{
+    background: url(D:/HTML%20projects/Apna%20Clinic/doc_bg2.png) no-repeat center center/cover;
+    height: 118vh;
+    padding-bottom: 15%;
+    margin: 0px 0px;
+}
+.logo .symbol{
+    padding: 4px;
+    width: 100px;
+    height: 100px;
+    padding-right: 10px;
+}
+.logo .name{
+    height: 100px;
+}
+.login{
+    margin: 7% 10%;
+    padding: 20px;
+    width: 30%;
+    height: 50%;
+    border: 2px solid gray;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 10px 10px 50px black;
+}
+.login .sign{
+    font-style: inherit;
+    color: rgb(13, 13, 245);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+    margin-left: 38%;
+}
+.login p input{
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+}
+.login p .email{
+    margin-left: 4px;
+}
+.login form button{
+    margin-left: 36%;
+    width: 24%;
+    height: 25%;
+    border-radius: 10px;
+    background-color: rgb(4, 226, 4);
+    cursor: pointer;
+    color: antiquewhite;
+}
+.login form a{
+    margin-left: 42%;
+    margin-top: 15px;
+}
+.login a{
+    text-decoration: none;
+}
+.login a:hover{
+    color: rgb(12, 12, 233);
+    text-decoration: underline;
+}

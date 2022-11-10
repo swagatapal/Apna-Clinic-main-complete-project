@@ -1,0 +1,108 @@
+body{
+    background-color: blanchedalmond;
+}
+.logo{
+    position: absolute;
+    z-index: 2;
+    margin: 0px 0px;
+}
+.logo .symbol{
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    padding-right: 15px;
+    border-radius: 25px;
+}
+.logo .name{
+    height: 40px;
+}
+nav{
+    background-color: black;
+    height: 52px;
+    margin: 0px 0px;
+    border-radius: 4px;
+}
+nav ul{
+    /* overflow: auto; */
+    margin-left: 24%;
+}
+nav li{
+    float: left;
+    list-style: none;
+    margin: 16px 20px;
+    
+}
+nav .profile{
+    margin: 8px 20px;
+    float: left;
+}
+nav li a{
+    color: aliceblue;
+    text-decoration: none;
+    padding: 5px 30px;
+    margin-top: 5px;
+}
+nav li a:hover{
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+nav .profile a:hover{
+    background-color: transparent;
+}
+nav li a img{
+    height: 35px;
+    width: 35px;
+    border-radius: 20px;
+    margin-top: 0px;
+}
+h1{
+    text-align: center;
+    color: rgb(1, 138, 138);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 40px;
+}
+p{
+    text-align: center;
+}
+p a{
+    font-weight: bold;
+    font-size: medium;
+    text-decoration: none;
+}
+.creaters{
+    width: 120%;
+    margin: 15px 25px;
+    height: 70%;
+}
+.creaters h2{
+    color: rgb(59, 59, 59);
+}
+.souradeep{
+    display: inline;
+    width: 35%;
+    margin: 18px;
+    /* border: 2px solid black; */
+    float: left;
+    height: 100%;
+    text-align: center;
+    margin-left: 60px;
+}
+.souradeep img{
+    height: 130px;
+    width: 130px;
+    border-radius: 110px;
+    border-width: 3px;
+}
+.souradeep button img{
+    height: 70px;
+    width: 70px;
+}
+.souradeep button{
+    height: 70px;
+    width: 70px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border-width: 0px;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Clinic | Liver Disease</title>
+    <link rel="stylesheet" href="\static\css\multidis.css">
+    <!-- <style>
+        .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+    </style> -->
+</head>
+<body>
+    <div class="logo">
+        <img class="symbol" src="\static\image\symbol.png" alt="" >
+        <img class="name" src="\static\image\logo_dark.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li class="profile"><a href=""><img src="\static\image\profile.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="image">
+        <img src="\static\image\nurse_note.webp" alt="">
+    </div>
+    <div class="main">
+        <h1>Liver Diseases</h1>
+        <p>Please provide correct information for the following parameters below to help us check your health condition:</p>
+        <form action="{{ url_for('predictPage') }}" method="POST">
+            <div id="overflowcheck">
+            <table>
+                <tr><td>age:</td><td>
+                    <input type="text" name="age" placeholder="Enter age" required="required"/>
+                </td></tr> 
+
+                <tr><td>Sex: </td><td>
+                    <input type="radio" name="sex" value="1"> Male 
+                    <input type="radio" name="sex" value="0"> Female
+                </td></tr>
+
+                <tr><td>Total Bilirubin: </td><td>
+                    <input type="text" name="TotalBilirubin " placeholder="in mg/dL" required="required"/>
+                </td></tr> 
+
+                <tr><td>Direct Bilirubin: </td><td>
+                    <input type="text" name="DirectBilirubin" placeholder="in mg/dL" required="required"/>
+                </td></tr> 
+
+                <tr><td>Alkaline Phosphotase: </td><td>
+                    <input type="text" name="AlkalinePhosphotase" placeholder="in IU/L" required="required">
+                </td></tr> 
+
+                <tr><td>Alanine Amino-transferase: </td><td>
+                    <input type="text" name="AlanineAmino-transferase" placeholder="in U/L" required="required">
+                </td></tr> 
+
+                <tr><td>Aspartate Amino-transferase: </td><td>
+                    <input type="text" name="AspartateAmino-transferase" placeholder="in U/L" required="required">
+                </td></tr> 
+
+                <tr><td>Protein: </td><td>
+                    <input type="text" name="Protein" placeholder="in g/dL" required="required">
+                </td></tr> 
+
+                <tr><td>Albumin: </td><td>
+                    <input type="text" name="Albumin" placeholder="in g/dL" required="required">
+                </td></tr>
+
+                <tr><td>Albumin to Globulin Ratio: </td><td>
+                    <input type="text" name="AlbumintoGlobulinRatio" placeholder="enter ratio" required="required">
+                </td></tr>  
+                
+                <!-- <tr><td>Dataset: </td><td>
+                    <input type="text" name="AlbumintoGlobulinRatio" placeholder="enter ratio" required="required">
+                </td></tr> -->
+            </table>
+            </div>
+           <br>
+            <button type="submit">Check</button>
+        </form>
+        <br>
+        <br>
+        <!-- <p>{{prediction_text}}</p> -->
+</body>
+<!-- <script>
+    function showValue(x)
+{
+ document.getElementById("slider_value").innerHTML=x;
+}
+</script> -->
+</html>
